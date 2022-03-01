@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #2F1847;
+  --x-color: #F96900;
+  --o-color: #D63AF9;
+  --border-color: #73D2DE;
+  --field-color: #DADFF7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +21,8 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: var(--bg-color);
+  color: var(--field-color)
 }
 
 #board {
@@ -21,17 +31,29 @@
   /* border: 1px solid black; */
   width: 300px;
   height: 300px;
+  background-color: var(--field-color);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .cell {
-  border: 1px black solid;
+  border: 1px solid var(--border-color);
   width: 100px;
   height: 100px;
+  /* color: black; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   cursor: pointer;
+}
+
+.x {
+  color: var(--x-color)
+}
+
+.o {
+  color: var(--o-color)
 }
 
 .buttons {
@@ -44,4 +66,9 @@
   background-color: white;
   border: 1px solid black;
   padding: 3px;
+  background-color: var(--field-color);
+  color: var(--bg-color);
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
