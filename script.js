@@ -7,7 +7,8 @@ const CELLS = 9;
 const MSG1 = "Player One Turn";
 const MSG2 = "Player Two Turn";
 let count = 9;
-
+let resultToShow = document.querySelectorAll('.line');
+// log(resultToShow)
 for (let i = 1; i <= CELLS; i++) {
   // for (let j = 1; j < rows; j++) {
   const gridCell = document.createElement("div");
@@ -66,51 +67,67 @@ function checkWinner(player) {
     divs[1].textContent == player &&
     divs[2].textContent == player
   )
-    return true;
+   { 
+    resultToShow[0].classList.add('winner-line');
+     return true;}
   if (
     divs[3].textContent == player &&
     divs[4].textContent == player &&
     divs[5].textContent == player
   )
-    return true;
+  { 
+    resultToShow[1].classList.add('winner-line');
+     return true;}
   if (
     divs[6].textContent == player &&
     divs[7].textContent == player &&
     divs[8].textContent == player
   )
-    return true;
+  { 
+    resultToShow[2].classList.add('winner-line');
+     return true;}
 
   if (
     divs[0].textContent == player &&
     divs[3].textContent == player &&
     divs[6].textContent == player
   )
-    return true;
+  { 
+    resultToShow[3].classList.add('winner-line');
+     return true;}
   if (
     divs[1].textContent == player &&
     divs[4].textContent == player &&
     divs[7].textContent == player
   )
-    return true;
+  { 
+    resultToShow[4].classList.add('winner-line');
+     return true;}
   if (
     divs[2].textContent == player &&
     divs[5].textContent == player &&
     divs[8].textContent == player
   )
-    return true;
+  { 
+    resultToShow[5].classList.add('winner-line');
+     return true;}
 
   if (
     divs[0].textContent == player &&
     divs[4].textContent == player &&
     divs[8].textContent == player
   )
-    return true;
+  { 
+    resultToShow[6].classList.add('winner-line');
+     return true;}
   if (
     divs[2].textContent == player &&
     divs[4].textContent == player &&
     divs[6].textContent == player
   )
-    return true;
+  { 
+    resultToShow[7].classList.add('winner-line');
+     return true;}
 }
 
 btnReset.addEventListener("click", () => {
@@ -122,5 +139,6 @@ btnReset.addEventListener("click", () => {
     divs[i].classList.remove("x", "o");
     divs[i].textContent = "";
     msg.textContent = MSG1;
+    resultToShow[i].classList.remove('winner-line');
   }
 });
