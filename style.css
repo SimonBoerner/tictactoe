@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 #wrapper {
   display: flex;
+  flex-flow: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -24,6 +27,11 @@
   border: 1px black solid;
   width: 100px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
 }
 
 .buttons {
