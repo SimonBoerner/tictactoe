@@ -116,6 +116,7 @@ function checkWinner(player) {
 btnReset.addEventListener("click", () => {
   isPlayerOneTurn = true;
   haveWinner = false;
+  count = 9;
   for (let i = 0; i <= 8; i++) {
     divs[i].dataset.empty = "none";
     divs[i].classList.remove("x", "o");
