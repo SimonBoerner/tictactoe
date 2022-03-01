@@ -25,3 +25,15 @@
   width: 100px;
   height: 100px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px;
+}
